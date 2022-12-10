@@ -40,7 +40,8 @@ function Join-Lobby{
 $friendlist =
 $friends =
 $puesto = 1
-
+$steamkey = read-host "Paste apikey"
+$profileid = read-host "Paste profile ID"
 $gameids = @("520440","348550")
 $container = [System.Collections.Generic.List[System.Object]]@()
 
