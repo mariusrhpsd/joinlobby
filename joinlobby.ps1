@@ -9,7 +9,7 @@ $StartTime = $(get-date)
 ## Defines Divide-Array to circunvent steamapi query limit of 100
 function Divide-Array{
     param(
-		[Parameter(Mandatory)]
+	[Parameter(Mandatory)]
         $array,
         [Parameter(Mandatory)]
         $arraysize
@@ -99,5 +99,3 @@ $picklobby-=1
 
 ## Joins picked lobby
 Join-Lobby -object $container[$picklobby]
-
-##  Finishes Timer
