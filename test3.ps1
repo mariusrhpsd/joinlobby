@@ -1,3 +1,7 @@
+## set your steamapi key and your own profile ID
+$steamkey = ""
+$profileid = ""
+
 ## Starts Timer
 
 $StartTime = $(get-date)
@@ -40,10 +44,15 @@ function Join-Lobby{
 $friendlist =
 $friends =
 $puesto = 1
-$steamkey = read-host "Paste apikey"
-$profileid = read-host "Paste profile ID"
-$gameids = @("520440","348550")
 $container = [System.Collections.Generic.List[System.Object]]@()
+
+## set your steamapi key and your own profile ID
+$steamkey = ""
+$profileid = ""
+
+## steam gameids to look for, set for Rev2 and GGXXAC+R
+$gameids = @("520440","348550")
+
 
 ## Get friendlist and friend IDs
 $friendlist = Invoke-RestMethod "http://api.steampowered.com/ISteamUser/GetFriendList/v0001/?key=$steamkey&steamid=$profileid"
